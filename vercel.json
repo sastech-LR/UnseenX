@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "buildCommand": "pnpm --filter @workspace/api-spec run codegen && BASE_PATH=/ pnpm --filter @workspace/unseenx run build",
+  "buildCommand": "npx --yes pnpm@10 --filter @workspace/api-spec run codegen && BASE_PATH=/ npx --yes pnpm@10 --filter @workspace/unseenx run build",
   "outputDirectory": "artifacts/unseenx/dist/public",
-  "installCommand": "npm install -g pnpm@10 && pnpm install --no-frozen-lockfile",
+  "installCommand": "npx --yes pnpm@10 install --no-frozen-lockfile",
   "framework": null,
   "rewrites": [
     {
