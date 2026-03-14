@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "buildCommand": "npm install -g pnpm && pnpm install --no-frozen-lockfile && pnpm --filter @workspace/api-spec run codegen && BASE_PATH=/ pnpm --filter @workspace/unseenx run build",
+  "buildCommand": "pnpm install --no-frozen-lockfile && pnpm --filter @workspace/api-spec run codegen && BASE_PATH=/ pnpm --filter @workspace/unseenx run build",
   "outputDirectory": "artifacts/unseenx/dist/public",
-  "installCommand": "npm install -g pnpm && pnpm install --no-frozen-lockfile",
+  "installCommand": "npm install -g pnpm@10 && pnpm install --no-frozen-lockfile",
   "framework": null,
   "rewrites": [
     {
