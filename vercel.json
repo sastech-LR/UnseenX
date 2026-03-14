@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "buildCommand": "npm install -g pnpm && pnpm install --no-frozen-lockfile && pnpm --filter @workspace/api-spec run codegen && pnpm --filter @workspace/unseenx run build",
+  "buildCommand": "npm install -g pnpm && pnpm install --no-frozen-lockfile && pnpm --filter @workspace/api-spec run codegen && BASE_PATH=/ pnpm --filter @workspace/unseenx run build",
   "outputDirectory": "artifacts/unseenx/dist/public",
   "installCommand": "npm install -g pnpm && pnpm install --no-frozen-lockfile",
   "framework": null,
@@ -10,7 +10,7 @@
       "destination": "/api/chat"
     },
     {
-      "source": "/(.*)",
+      "source": "/((?!api/).*)",
       "destination": "/index.html"
     }
   ],
